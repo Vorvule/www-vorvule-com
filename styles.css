@@ -1,5 +1,5 @@
 @font-face { font-family:Comfortaa; src:url(app/font/Comfortaa-Medium.ttf) }
-* { font-family: 'Century Gothic', Comfortaa,sans-serif }
+* { font-family: Comfortaa, 'Century Gothic', sans-serif }
 *, *:before, *:after { box-sizing:inherit }
 body { line-height:1.5;max-width:1400px;margin:0 auto;overflow-x:hidden }
 

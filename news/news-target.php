@@ -412,7 +412,7 @@ function create_html_page($news) {
         if ($news[$i]['article_enclosure_url']) {
             switch ($news[$i]['article_enclosure_type']) {
                 case 'image/jpeg':
-                    $news[$i]['item'] .= '<img src="https://vorvule.com/news/jpg/' . $news[$i]['article_enclosure_url'] . '">';
+                    $news[$i]['item'] .= '<img src="https://vorvule.com/news/jpg/' . $news[$i]['article_enclosure_url'] . '" alt="' . $news[$i]['article_title'] . '">';
                     break;
                 case 'video/mp4':
                     $news[$i]['item'] .= '<video preload="auto" controls>';
@@ -423,7 +423,7 @@ function create_html_page($news) {
                     $news[$i]['item'] .= '<iframe src="https://www.youtube.com/embed/' . $news[$i]['article_enclosure_url'] . '"></iframe>';
                     break;
                 case 'image/gif':
-                    $news[$i]['item'] .= '<img src="' . $news[$i]['article_enclosure_url'] . '">';
+                    $news[$i]['item'] .= '<img src="' . $news[$i]['article_enclosure_url'] . '" alt="' . $news[$i]['article_title'] . '">';
                     break;
             }
         }
