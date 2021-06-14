@@ -506,7 +506,7 @@ function delete_vain_images($news) {
             $deleted_images[] = $jpg_folder_images_i;
         }
     }
-
+}
 
 
 
