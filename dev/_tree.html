@@ -1,0 +1,116 @@
+<nav id='navy'>
+
+    <p id='market' class='line' onclick='site.tree.line(this.id)'>МАРКЕТ</p>
+    <div id='market-submenu' style='display:none'>
+        <p id='market-services' class='land'   onclick='site.tree.land(this.id)'>УСЛУГИ</p>
+        <div id='market-services-submenu'>
+            <p id='market-services-ru-courses' onclick='site.feed.open(this.id)'>Курсы IT</p>
+        </div>
+    </div>
+    
+
+    <p id='news' class='line' onclick='site.tree.line(this.id)'>НОВОСТИ</p>
+    <div id='news-submenu' style='display:none'>
+        <p id='news-by' class='land' onclick='site.tree.land(this.id)'>БЕЛАРУСЬ</p>
+        <div id='news-by-submenu' style='display:none'>
+            <p id='news-by-ru-motive' onclick='site.feed.open(this.id)'>Авто</p>
+            <p id='news-by-be-ribbon' onclick='site.feed.open(this.id)'>Відэа</p>
+            <p id='news-by-ru-realty' onclick='site.feed.open(this.id)'>Жильё</p>
+            <!--
+            <p id='news-by-ru-econom' onclick='site.feed.open(this.id)'>Деньги</p>
+            <p id= onclick='site.feed.open("ru-styles",this.id)'>Общество</p>
+            <p id= onclick='site.feed.open("ru-region",this.id)'>Регионы</p>
+            -->
+            <p id='news-by-ru-common' onclick='site.feed.open(this.id)'>Мир</p>
+            <p id='news-by-be-common' onclick='site.feed.open(this.id)'>Сусвет</p>
+            <p id='news-by-ru-techno' onclick='site.feed.open(this.id)'>Наука</p>
+            <p id='news-by-ru-sports' onclick='site.feed.open(this.id)'>Спорт</p>
+        </div>
+        <p id='news-ru' class='land' onclick='site.tree.land(this.id)'>РОССИЯ</p>
+        <div id='news-ru-submenu' style='display:none'>
+            <p id='news-ru-ru-papers' onclick='site.feed.open(this.id)'>Газеты</p>
+            <p id='news-ru-ru-common' onclick='site.feed.open(this.id)'>Мир</p>
+            <p id='news-ru-ru-mediae' onclick='site.feed.open(this.id)'>Радио и ТВ</p>
+            <p id='news-ru-ru-styles' onclick='site.feed.open(this.id)'>Стиль</p>
+            <p id='news-ru-ru-techno' onclick='site.feed.open(this.id)'>Техника</p>
+        </div>
+        <p id='news-ua' class='land' onclick='site.tree.land(this.id)'>УКРАЇНА</p>
+        <div id='news-ua-submenu' style='display:none'>
+            <p id='news-ua-uk-papers' onclick='site.feed.open(this.id)'>Газети</p>
+            <p id='news-ua-ru-common' onclick='site.feed.open(this.id)'>Мир</p>
+            <p id='news-ua-uk-mediae' onclick='site.feed.open(this.id)'>Радіо і ТБ</p>
+            <p id='news-ua-uk-common' onclick='site.feed.open(this.id)'>Світ</p>
+            <p id='news-ua-uk-sports' onclick='site.feed.open(this.id)'>Спорт</p>
+            <p id='news-ua-uk-econom' onclick='site.feed.open(this.id)'>Фінанси</p>
+        </div>
+    </div>
+
+    
+    <p id='contacts' class='line' onclick='site.tree.line(this.id)'>КОНТАКТЫ</p>
+    <div id='contacts-submenu' style='display:none'>
+        <p id='contacts-rules' class='land'    onclick='site.tree.land(this.id)'>ПРАВИЛА</p>
+        <div id='contacts-rules-submenu'>
+            <p id='contacts-rules-en-policy'   onclick='site.feed.open(this.id)'>Политика защиты данных</p>
+            <p id='contacts-rules-en-terms'    onclick='site.feed.open(this.id)'>Правила пользования</p>
+        </div>
+        <p id='contacts-connect' class='land'  onclick='site.tree.land(this.id)'>СВЯЗЬ</p>
+        <div id='contacts-connect-submenu' style='display:none'>
+            <p id='contacts-connect-ru-smm'    onclick='site.feed.open(this.id)'>Социальные сети</p>
+            <p id='contacts-connect-ru-mail'   onclick='site.feed.open(this.id)'>Форма для связи</p>
+        </div>
+    </div>
+
+
+
+<!--
+
+        <p class='line' onclick='site.tree.open(this)'>КНИГИ</p>
+        <div>
+            <p class='land' onclick='site.tree.open(this)'>СЛОЎНІКІ</p>
+            <div id='books-dictionaries'>
+                <p onclick='selectItem(2, 0, 0, this)'>Беларускай мовы</p>
+                <p onclick='selectItem(2, 0, 1, this)'>Прыказак</p>
+            </div>
+        </div>
+        
+        
+        
+        <p class='line' onclick='site.tree.open(this)'>ВІДЭА</p>
+        <div>
+        
+            <p class='land' onclick='site.tree.open(this)'>МУЗЫКА</p>
+            <div id='video-music' style='display:block'>
+                <p onclick='site.feed.open("clips",this)' style='display:block'>Кліпы</p>
+            </div>
+        
+            <p class='land' onclick='site.tree.open(this)'>МЕДЫЯ</p>
+            <div id='video-media'>
+                <p onclick='site.feed.open("objtv",this)'>Аб'ектыў БелСат</p>
+                <p onclick='site.feed.open("radio",this)'>Радыё Свабода</p>
+            </div>
+            
+            <p class='land' onclick='site.tree.open(this)'>МУЛЬТФІЛЬМЫ</p>
+            <div id='video-anims'>
+                <p onclick='site.feed.open("anim0",this)'>Анімацыя 0+</p>
+                <p onclick='site.feed.open("anim6",this)'>Анімацыя 6+</p>
+                <p onclick='site.feed.open("anim12",this)'>Анімацыя 12+</p>
+                <p onclick='site.feed.open("anim18",this)'>Анімацыя 18+</p>
+                <p onclick='site.feed.open("mults",this)'>Мультфільмы</p>
+            </div>
+           
+            <p class='land' onclick='site.tree.open(this)'>ФІЛЬМЫ</p>
+            <div id='video-films'>
+                <p onclick='site.feed.open("short",this)'>Кароткаметражныя</p>
+            </div>
+            
+            <p class='land' onclick='site.tree.open(this)'>ГІСТОРЫЯ</p>
+            <div id='video-hists'>
+                <p onclick='site.feed.open("chase",this)'>Гісторыя пад знакам Пагоні</p>
+                <p onclick='site.feed.open("quest",this)'>Загадкі беларускай гісторыі</p>
+                <p onclick='site.feed.open("kalin",this)'>Слядамі Каліноўскага</p>
+            </div>
+            
+        </div>
+-->
+</nav>
+

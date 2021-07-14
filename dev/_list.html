@@ -1,0 +1,916 @@
+<div class="w3-panel w3-card">
+  
+  <!-- TAB NAVIGATION -->
+
+  <div class="tabNav">
+    <a href="javascript:tabSelect(0,'tab');" class="tabIcon w3-text-blue">
+      <i class="fab fa-fort-awesome-alt"></i>
+    </a>
+    <a href="javascript:tabSelect(1,'tab');" class="tabIcon">
+      <i class="fas fa-globe"></i>
+    </a>
+    <a href="javascript:tabSelect(2,'tab');" class="tabIcon"><i class="fas fa-rss"></i></a>
+    <a href="javascript:tabSelect(3,'tab');" class="tabIcon"><i class="fas fa-cog"></i></a>
+    <a href="javascript:tabSelect(4,'tab');" class="tabIcon"><i class="far fa-envelope"></i></a>
+  </div>
+  
+  <!-- TABS -->
+  
+  <div class="w3-panel tab" style="padding:0">
+
+    <table class="menu w3-table w3-margin-top">
+    
+      <tr style="width:100%!important">
+        <td id="BY" onclick="locClick(this.id)" class="spot">БЕЛАРУСЬ</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+    
+          <tr class="BYL"> <!-- w3-hide etc -->
+            <td id="BYbe" class="chan" onclick="locClick(this.id)">СТУЖКА</td>
+            <td class="tico" onclick="w3.toggleClass('.BYbe','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbebp" class="feed">БелаПАН</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbebs" class="feed">БелСат</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbezw" class="feed">Звязда</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbenn" class="feed">Наша Ніва</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbenc" class="feed">Новы Час</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYberf" class="feed">Радыё Свабода</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbeid" class="feed">Часопіс Ідэя</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYbe w3-hide">
+                <td onclick="locClick(this.id)" id="BYbesb" class="feed">Sputnik.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+          
+          <tr class="BYL">
+            <td id="BYru" class="chan" onclick="locClick(this.id)">ЛЕНТА</td>
+            <td class="tico" onclick="w3.toggleClass('.ru','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYruta" class="feed">БелТА</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYrubn" class="feed">БелНовости</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYruej" class="feed">Ежедневник</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYrunv" class="feed">Народная Воля</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYruif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYrunb" class="feed">Naviny.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYrusb" class="feed">Sputnik.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYrutt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY ru w3-hide">
+                <td onclick="locClick(this.id)" id="BYruud" class="feed">UDF.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYls" class="chan" onclick="locClick(this.id)">СТИЛЬ</td>
+            <td class="tico" onclick="w3.toggleClass('.BYls','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYls w3-hide">
+                <td onclick="locClick(this.id)" id="BYlsif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYls w3-hide">
+                <td onclick="locClick(this.id)" id="BYlstt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYau" class="chan" onclick="locClick(this.id)">АВТО</td>
+            <td class="tico" onclick="w3.toggleClass('.BYau','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYau w3-hide">
+                <td onclick="locClick(this.id)" id="BYauif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYau w3-hide">
+                <td onclick="locClick(this.id)" id="BYautt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+                </tr>
+
+          <tr class="BYL">
+            <td id="BYsp" class="chan" onclick="locClick(this.id)">СПОРТ</td>
+            <td class="tico" onclick="w3.toggleClass('.BYsp','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYsp w3-hide">
+                <td onclick="locClick(this.id)" id="BYspif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYsp w3-hide">
+                <td onclick="locClick(this.id)" id="BYsptt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYbu" class="chan" onclick="locClick(this.id)">БИЗНЕС</td>
+            <td class="tico" onclick="w3.toggleClass('.bu','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY bu w3-hide">
+                <td onclick="locClick(this.id)" id="BYbubr" class="feed">БелРынок</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY bu w3-hide">
+                <td onclick="locClick(this.id)" id="BYbuif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY bu w3-hide">
+                <td onclick="locClick(this.id)" id="BYbupb" class="feed">Про Бизнес</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY bu w3-hide">
+                <td onclick="locClick(this.id)" id="BYbumf" class="feed">MyFin.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY bu w3-hide">
+                <td onclick="locClick(this.id)" id="BYbutt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+          
+          <tr class="BYL">
+            <td id="BYre" class="chan" onclick="locClick(this.id)">РЭГІЁНЫ</td>
+            <td class="tico" onclick="w3.toggleClass('.re','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrewe" class="feed">Весткі.Info</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrevb" class="feed">Виртуальный Брест</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrevv" class="feed">Віцебская Вясна</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrehl" class="feed">Гродна.Life</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrelg" class="feed">Лідская Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrerh" class="feed">Рэгіянальная Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYreex" class="feed">Ex-Press.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYreip" class="feed">Intex-Press.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY re w3-hide">
+                <td onclick="locClick(this.id)" id="BYrecd" class="feed">CityDog</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYhl" class="chan" onclick="locClick(this.id)">ЗДОРОВЬЕ</td>
+            <td class="tico" onclick="w3.toggleClass('.BYhl','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYhl w3-hide">
+                <td onclick="locClick(this.id)" id="BYhlif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYhl w3-hide">
+                <td onclick="locClick(this.id)" id="BYhltt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYte" class="chan" onclick="locClick(this.id)">ТЕХНОЛОГИИ</td>
+            <td class="tico" onclick="w3.toggleClass('.BYte','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYte w3-hide">
+                <td onclick="locClick(this.id)" id="BYteif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYte w3-hide">
+                <td onclick="locClick(this.id)" id="BYtepk" class="feed">ПВТ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYte w3-hide">
+                <td onclick="locClick(this.id)" id="BYtett" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYrs" class="chan" onclick="locClick(this.id)">НЕДВИЖИМОСТЬ</td>
+            <td class="tico" onclick="w3.toggleClass('.BYrs','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYrs w3-hide">
+                <td onclick="locClick(this.id)" id="BYrsif" class="feed">Интерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYrs w3-hide">
+                <td onclick="locClick(this.id)" id="BYrsrb" class="feed">Realt.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYrs w3-hide">
+                <td onclick="locClick(this.id)" id="BYrstt" class="feed">Tut.By</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+
+          <tr class="BYL">
+            <td id="BYst" class="chan" onclick="locClick(this.id)">ГОСУДАРСТВО</td>
+            <td class="tico" onclick="w3.toggleClass('.BYst','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="BY BYst w3-hide">
+                <td onclick="locClick(this.id)" id="BYstmf" class="feed">МИД РБ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYst w3-hide">
+                <td onclick="locClick(this.id)" id="BYstan" class="feed">НАН РБ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYst w3-hide">
+                <td onclick="locClick(this.id)" id="BYstnb" class="feed">НБ РБ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="BY BYst w3-hide">
+                <td onclick="locClick(this.id)" id="BYstmi" class="feed">МИ РБ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+  </div>
+
+  
+  <div class="w3-panel tab w3-hide" style="padding:0">
+    
+    <table class="menu w3-table w3-margin-top"> <!-- -->
+      <tr style="width:100%!important">
+        <td id="RU" onclick="locClick(this.id)" class="spot">РОССИЯ</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+      
+          <tr class="RUL w3-hide">
+            <td id="RUru" class="chan" onclick="locClick(this.id)">ЛЕНТА</td>
+            <td class="tico" onclick="w3.toggleClass('.RUru','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+            </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUruvs" class="feed">Вести.Ru</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUrugz" class="feed">Газета.Ru</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUrurn" class="feed">Дождь ТВ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUruln" class="feed">Лента.Ru</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUrumd" class="feed">Медуза</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUrurf" class="feed">Радио Свобода</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUruut" class="feed">Утро</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUrukm" class="feed">КМ.Ru</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUru w3-hide">
+                <td onclick="locClick(this.id)" id="RUruzn" class="feed">Znak</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+                </tr>
+          
+          <tr class="RUL w3-hide">
+            <td id="RUga" class="chan" onclick="locClick(this.id)">ГАЗЕТЫ И ЖУРНАЛЫ</td>
+            <td class="tico" onclick="w3.toggleClass('.RUga','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="RU RUga w3-hide">
+                <td onclick="locClick(this.id)" id="RUgaaf" class="feed">Аргументы и Факты</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUga w3-hide">
+                <td onclick="locClick(this.id)" id="RUgako" class="feed">Коммерсантъ</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUga w3-hide">
+                <td onclick="locClick(this.id)" id="RUgakp" class="feed">Комсомольская Правда</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUga w3-hide">
+                <td onclick="locClick(this.id)" id="RUgarg" class="feed">Российская Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUga w3-hide">
+                <td onclick="locClick(this.id)" id="RUgaog" class="feed">Огонёк</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="RUL w3-hide">
+            <td id="RUte" class="chan" onclick="locClick(this.id)">ТЕХНОЛОГИИ</td>
+            <td class="tico" onclick="w3.toggleClass('.RUte','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="RU RUte w3-hide">
+                <td onclick="locClick(this.id)" id="RUtetd" class="feed">3DNews</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUte w3-hide">
+                <td onclick="locClick(this.id)" id="RUterg" class="feed">Российская Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUte w3-hide">
+                <td onclick="locClick(this.id)" id="RUtecn" class="feed">CNews</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUte w3-hide">
+                <td onclick="locClick(this.id)" id="RUteit" class="feed">IT-World</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="RUL w3-hide">
+            <td id="RUot" class="chan" onclick="locClick(this.id)">ОБРАЗ ЖИЗНИ</td>
+            <td class="tico" onclick="w3.toggleClass('.RUot','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="RU RUot w3-hide">
+                <td onclick="locClick(this.id)" id="RUottf" class="feed">24smi</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUot w3-hide">
+                <td onclick="locClick(this.id)" id="RUotam" class="feed">AdMe</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUot w3-hide">
+                <td onclick="locClick(this.id)" id="RUotdr" class="feed">Drive</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUot w3-hide">
+                <td onclick="locClick(this.id)" id="RUotft" class="feed">Fashion Time</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="RUL w3-hide">
+            <td id="RUsp" class="chan" onclick="locClick(this.id)">СПОРТ</td>
+            <td class="tico" onclick="w3.toggleClass('.RUsp','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="RU RUsp w3-hide">
+                <td onclick="locClick(this.id)" id="RUspes" class="feed">Eurosport</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUsp w3-hide">
+                <td onclick="locClick(this.id)" id="RUspse" class="feed">Sport-Express</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="RU RUsp w3-hide">
+                <td onclick="locClick(this.id)" id="RUspsr" class="feed">Sport</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+    
+    
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="UA" onclick="locClick(this.id)" class="spot">УКРАЇНА</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="UAL w3-hide">
+            <td id="UAuk" class="chan" onclick="locClick(this.id)">СТРІЧКА</td>
+            <td class="tico" onclick="w3.toggleClass('.UAuk','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukfk" class="feed">5 канал</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukgz" class="feed">Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukgk" class="feed">Главком</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukdn" class="feed">День</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukif" class="feed">Інтерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukrf" class="feed">Радіо Свобода</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukrb" class="feed">РБК-Україна</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAuksg" class="feed">Сегодня</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukts" class="feed">ТСН</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAuk w3-hide">
+                <td onclick="locClick(this.id)" id="UAukua" class="feed">УНІАН</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+          <tr class="UAL w3-hide">
+            <td id="UAru" class="chan" onclick="locClick(this.id)">ЛЕНТА</td>
+            <td class="tico" onclick="w3.toggleClass('.UAru','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArubn" class="feed">Багнет</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArugz" class="feed">Газета</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArugr" class="feed">Главред</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArugd" class="feed">Гордон</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UAruif" class="feed">Інтерфакс</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArurb" class="feed">РБК-Україна</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UArusg" class="feed">Сегодня</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UAruts" class="feed">ТСН</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAru w3-hide">
+                <td onclick="locClick(this.id)" id="UAruua" class="feed">УНІАН</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+          <tr class="UAL w3-hide">
+            <td id="UAbu" class="chan" onclick="locClick(this.id)">БІЗНЕС</td>
+            <td class="tico" onclick="w3.toggleClass('.UAbu','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="UA UAbu w3-hide">
+                <td onclick="locClick(this.id)" id="UAbugd" class="feed">Гордон</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAbu w3-hide">
+                <td onclick="locClick(this.id)" id="UAbukr" class="feed">Корреспондент</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAbu w3-hide">
+                <td onclick="locClick(this.id)" id="UAbulg" class="feed">Ліга</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAbu w3-hide">
+                <td onclick="locClick(this.id)" id="UAburf" class="feed">Радіо Свобода</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAbu w3-hide">
+                <td onclick="locClick(this.id)" id="UAburb" class="feed">РБК-Україна</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+          <tr class="UAL w3-hide">
+            <td id="UAsp" class="chan" onclick="locClick(this.id)">СПОРТ</td>
+            <td class="tico" onclick="w3.toggleClass('.UAsp','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAspgd" class="feed">Гордон</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAsplg" class="feed">Ліга</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAsprb" class="feed">РБК-Україна</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAspsp" class="feed">Спорт.Ua</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAspfa" class="feed">Факты</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="UA UAsp w3-hide">
+                <td onclick="locClick(this.id)" id="UAspxs" class="feed">xSport</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+
+
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="DE" onclick="locClick(this.id)" class="spot">DEUTSCHLAND</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="DEL w3-hide">
+            <td id="DEde" class="chan" onclick="locClick(this.id)">NACHRICHTENSTROM</td>
+            <td class="tico" onclick="w3.toggleClass('.DEde','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="DE DEde w3-hide">
+                <td onclick="locClick(this.id)" id="DEdebz" class="feed">Berliner Zeitung</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="DE DEde w3-hide">
+                <td onclick="locClick(this.id)" id="DEdefz" class="feed">Frankfurter Allgemeine Zeitung</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="DE DEde w3-hide">
+                <td onclick="locClick(this.id)" id="DEderz" class="feed">Rhein Zeitung</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="DE DEde w3-hide">
+                <td onclick="locClick(this.id)" id="DEdesz" class="feed">Süddeutsche Zeitung</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="DE DEde w3-hide">
+                <td onclick="locClick(this.id)" id="DEdets" class="feed">Tagesschau</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="FR" onclick="locClick(this.id)" class="spot">FRANCE</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="FRL w3-hide">
+            <td id="FRfr" class="chan" onclick="locClick(this.id)">FIL DE PRESSE</td>
+            <td class="tico" onclick="w3.toggleClass('.FRfr','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrbf" class="feed">BFM TV</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrfb" class="feed">France Bleu</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrfm" class="feed">France Info | Monde</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrfi" class="feed">France Info | Titres</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrft" class="feed">France Inter</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrms" class="feed">France Musique</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrmd" class="feed">Le Monde</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="FR FRfr w3-hide">
+                <td onclick="locClick(this.id)" id="FRfrpr" class="feed">Le Parisien</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+    
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="GB" onclick="locClick(this.id)" class="spot">GREAT BRITAIN</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="GBL w3-hide">
+            <td id="GBen" class="chan" onclick="locClick(this.id)">TOP</td>
+            <td class="tico" onclick="w3.toggleClass('.GBen','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBenbb" class="feed">BBC</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBendm" class="feed">Daily Mirror</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBends" class="feed">Daily Star</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBenin" class="feed">The Independent</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBenes" class="feed">Evening Standard</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBen w3-hide">
+                <td onclick="locClick(this.id)" id="GBentg" class="feed">The Telegraph</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="GBL w3-hide">
+            <td id="GBbu" class="chan" onclick="locClick(this.id)">BUSINESS</td>
+            <td class="tico" onclick="w3.toggleClass('.GBbu','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="GB GBbu w3-hide">
+                <td onclick="locClick(this.id)" id="GBbubb" class="feed">BBC</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBbu w3-hide">
+                <td onclick="locClick(this.id)" id="GBbuin" class="feed">Independent</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="GBL w3-hide">
+            <td id="GBev" class="chan" onclick="locClick(this.id)">ENVIRONMENT</td>
+            <td class="tico" onclick="w3.toggleClass('.GBev','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="GB GBev w3-hide">
+                <td onclick="locClick(this.id)" id="GBevbb" class="feed">BBC</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBev w3-hide">
+                <td onclick="locClick(this.id)" id="GBevin" class="feed">Independent</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="GBL w3-hide">
+            <td id="GBet" class="chan" onclick="locClick(this.id)">ENTERTAINMENT</td>
+            <td class="tico" onclick="w3.toggleClass('.GBet','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="GB GBet w3-hide">
+                <td onclick="locClick(this.id)" id="GBetbb" class="feed">BBC</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBet w3-hide">
+                <td onclick="locClick(this.id)" id="GBetin" class="feed">Independent</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBet w3-hide">
+                <td onclick="locClick(this.id)" id="GBetmt" class="feed">Metro</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              
+          <tr class="GBL w3-hide">
+            <td id="GBte" class="chan" onclick="locClick(this.id)">TECHNOLOGY</td>
+            <td class="tico" onclick="w3.toggleClass('.GBte','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="GB GBte w3-hide">
+                <td onclick="locClick(this.id)" id="GBtebb" class="feed">BBC</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBte w3-hide">
+                <td onclick="locClick(this.id)" id="GBtein" class="feed">Independent</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBte w3-hide">
+                <td onclick="locClick(this.id)" id="GBtetr" class="feed">Tech Radar</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBte w3-hide">
+                <td onclick="locClick(this.id)" id="GBtete" class="feed">Tech Republic</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="GB GBte w3-hide">
+                <td onclick="locClick(this.id)" id="GBtetw" class="feed">Tech World</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+    
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="IT" onclick="locClick(this.id)" class="spot">ITALIA</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="ITL w3-hide">
+            <td id="ITit" class="chan" onclick="locClick(this.id)">STRISCIA</td>
+            <td class="tico" onclick="w3.toggleClass('.it','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITitcs" class="feed">Corriere della Sera</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITit24" class="feed">Il Sole 24 Ore</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITitgm" class="feed">La Gazzetta del Mezzogiorno</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITitgs" class="feed">La Gazzetta dello Sport</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITitls" class="feed">La Stampa</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="IT it w3-hide">
+                <td onclick="locClick(this.id)" id="ITitrp" class="feed">Repubblica</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+    
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="MD" onclick="locClick(this.id)" class="spot">MOLDOVA</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="MDL w3-hide">
+            <td id="MDmd" class="chan" onclick="locClick(this.id)">ȘTIRI FEED</td>
+            <td class="tico" onclick="w3.toggleClass('.md','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="MD md w3-hide">
+                <td onclick="locClick(this.id)" id="MDmdcv" class="feed">Civic</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="MD md w3-hide">
+                <td onclick="locClick(this.id)" id="MDmdno" class="feed">Noi</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="MD md w3-hide">
+                <td onclick="locClick(this.id)" id="MDmdpb" class="feed">Publika</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="MD md w3-hide">
+                <td onclick="locClick(this.id)" id="MDmdrf" class="feed">Radio Libertatea</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+
+
+    <table class="menu w3-table">
+      <tr style="width:100%!important">
+        <td id="US" onclick="locClick(this.id)" class="spot">UNITED STATES</td>
+        <td class="tico spot" onclick="spotFold(this)"><i class="fas fa-caret-down"></i></td>
+      </tr>
+          <tr class="USL w3-hide">
+            <td id="USen" class="chan" onclick="locClick(this.id)">FEED</td>
+            <td class="tico" onclick="w3.toggleClass('.us','w3-hide')" ><i class="fas fa-ellipsis-h"></i></td>
+          </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USenlt" class="feed">Los Angeles Times</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USennb" class="feed">NBC News</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USennp" class="feed">New York Post</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USentc" class="feed">TechCrunch</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USentr" class="feed">TechRadar</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USenhl" class="feed">The Hill</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USenhp" class="feed">The Huffington Post</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USennt" class="feed">The New York Times</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USentd" class="feed">USA Today</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+              <tr class="US us w3-hide">
+                <td onclick="locClick(this.id)" id="USenwr" class="feed">Wired</td>
+                <td onclick="toggleCode(this)" class="tico"><i class="fas fa-toggle-off"></i></td>
+              </tr>
+    </table>
+  </div>
+
+
+  <div class="w3-panel tab w3-hide">
+    <div class="w3-row">
+      <input id="singleRss"
+        type="text"
+        name="val"
+        class="w3-col w3-input w3-section"
+        style="width:85%"
+        placeholder="Крыніца RSS"
+        autocomplete="off">
+      <input class="w3-col w3-input w3-section"
+        type="submit"
+        onclick="singleRSS(document.getElementById('singleRss').value)"
+        style="width:15%;background-color:white;cursor:pointer"
+        value="&#8594;">
+    </div>
+  </div>
+  
+  
+  <div class="w3-panel tab w3-hide" style="padding:0">
+  <ul class="w3-ul w3-margin-top">
+    <li>
+    <input type="checkbox" onchange="changeAutoupdate(this.checked)" checked> Абнаўляць стужку навін праз
+    </li>
+    <div style="margin-left:16px">
+      <li>
+        <input type="radio" onchange="changeInterval(this.value)" name="int" value="1"> 1 хвіліну
+      </li>
+      <li>
+        <input type="radio" onchange="changeInterval(this.value)" name="int" value="2"> 2 хвіліны
+      </li>
+      <li>
+        <input type="radio" onchange="changeInterval(this.value)" name="int" value="5" checked> 5 хвілін
+      </li>
+      <li>
+        <input type="radio" onchange="changeInterval(this.value)" name="int" value="15"> 15 хвілін
+      </li>
+      <li>
+        <input type="radio" onchange="changeInterval(this.value)" name="int" value="30"> 30 хвілін
+      </li>
+    </div>
+  </ul>
+  </div>
+  <!-- Адлюстроўваць навіны толькі са здымкамі -->
+  <!-- Адлюстроўваць навіны толькі на наступнай мове -->
+  
+  <div class="w3-panel tab w3-hide" style="padding:0">
+    <form method="post" id="form">
+      <input class="w3-input w3-section w3-border mail" type="text" placeholder="Імя" name="Name">
+      <input class="w3-input w3-section w3-border mail" type="text" placeholder="Пошта" name="Email">
+      <input class="w3-input w3-section w3-border mail" type="text" placeholder="Тэма" name="Subject">
+      <textarea class="w3-input w3-section w3-border mail" type="text" placeholder="Допіс" name="Comment"></textarea>
+      <div class="w3-input w3-border w3-border-blue w3-text-blue" id="send" onclick="send();" style="cursor:pointer">Даслаць</div>
+      </br>
+    </form>
+  </div>
+
+</div>

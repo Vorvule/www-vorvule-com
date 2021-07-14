@@ -1,0 +1,112 @@
+<div class='column'>
+    <div class='left tree-icon marked' onclick='site.tree.showCurrent(this)'>
+        <i class='fa fa-hand-pointer-o'        aria-hidden='true' style='font-weight:bold'></i>
+    </div>
+    <div class='left tree-icon'        onclick='site.tree.expandAll(this)'>
+        <i class='fa fa-plus-square-o'         aria-hidden='true' style='font-weight:bold'></i>
+    </div>
+    <div class='left tree-icon'        onclick='site.tree.collapseAll(this)'>
+        <i class='fa fa-minus-square-o'        aria-hidden='true' style='font-weight:bold'></i>
+    </div>
+</div>
+
+
+
+
+<div class='column'>
+    <div class='right' onclick='site.tree.swap()' id='bars'>
+        <i class='fa fa-bars' aria-hidden='true'></i>
+        <!--<span>Меню</span><div>Меню</div>-->
+    </div>
+
+    <div class='right' id='logo'>
+        <div style='width:42px;height:42px'>
+            <div style='background-color:dodgerblue;margin:8px auto 0;width:28px;height:28px;border-radius:14px;position:relative'>
+                <div style='background-color:white;position:absolute;top:5px;left:5px;width:6px;height:6px;border-radius:3px'></div>
+            </div>
+        </div>
+    </div>
+
+    <div id='menu'>
+
+        <div class='right' onclick='site.input.erase()'>
+            <i class='fa fa-eraser' aria-hidden='true' style='display:none' id='eraser'></i>
+        </div>
+
+        <div class='right' onclick='site.atop()'>
+            <i class='fa fa-arrow-up' aria-hidden='true' id='arrow'></i>
+        </div>
+
+        <div class='left' onclick='site.ajax(site.href.path(), "feed")'>
+            <i class='fa fa-refresh' aria-hidden='true'></i>
+        </div>
+
+        <div class='left' onclick='site.input.swap()' id='glass'>
+            <i class='fa fa-search' aria-hidden='true'></i>
+        </div>
+
+        <div class='left' id='info'></div>
+
+        <input
+            id='input'
+            placeholder='Пошук ...'
+            onfocus='this.placeholder=""'
+            onblur='this.placeholder="Пошук ..."'
+            onkeyup='site.input.filter(this.value)'
+            style='display:none'
+        ></input>
+
+    </div>
+    
+    <div id='treeIcons'>
+        <div class='left tree-icon marked' onclick='site.tree.showCurrent(this)'>
+            <i class='fa fa-hand-pointer-o'        aria-hidden='true' style='font-weight:bold'></i>
+        </div>
+        <div class='left tree-icon'        onclick='site.tree.expandAll(this)'>
+            <i class='fa fa-plus-square-o'         aria-hidden='true' style='font-weight:bold'></i>
+        </div>
+        <div class='left tree-icon'        onclick='site.tree.collapseAll(this)'>
+            <i class='fa fa-minus-square-o'        aria-hidden='true' style='font-weight:bold'></i>
+        </div>
+    </div>
+    
+    <!--
+    <div id='smms' style='display:none'>
+        <div class='left' onclick='location.href="https://play.google.com/store/apps/details?id=com.vorvule"'>
+            <i class='fa fa-android' aria-hidden='true'></i>
+        </div>
+        <div class='left' onclick='location.href="https://t.me/vorvulecom"'>
+            <i class='fa fa-paper-plane' aria-hidden='true'></i>
+        </div>
+        <div class='left' onclick='location.href="https://twitter.com/VorvuleCom"'>
+            <i class='fa fa-twitter' aria-hidden='true'></i>
+        </div>
+        <div class='left' onclick='location.href="https://www.facebook.com/groups/614567819344326"'>
+            <i class='fa fa-facebook' aria-hidden='true'></i>
+        </div>
+    </div>
+    -->
+</div>
+
+
+
+
+<div class='column' style='height:46px'>
+    <!--
+    <div class='right' onclick=''>
+        <i class='fa fa-list' aria-hidden='true'></i>
+    </div>
+    <div class='right' onclick=''>
+        <i class='fa fa-clock-o' aria-hidden='true'></i>
+    </div>
+    <div class='right' onclick=''>
+        <i class='fa fa-credit-card' aria-hidden='true'></i>
+    </div>
+    -->
+    <div class='widget-icon right' onclick='site.band.showWidget("mapFrame")' id='mapFrame-icon'>
+        <i class='fa fa-map-o' aria-hidden='true'></i>
+    </div>
+    <div class='widget-icon right marked' onclick='site.band.showWidget("thanosCalendar")' id='thanosCalendar-icon'>
+        <i class='fa fa-calendar'   aria-hidden='true'></i>
+    </div>
+</div>

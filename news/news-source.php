@@ -1,7 +1,6 @@
 <?php
 
 $sources = array(
-
 # article url
 # article name
 # article text xpath
@@ -33,10 +32,10 @@ $sources = array(
         '//div[@class="article-content" or @class="article__text"]//p[not(@class or .//span)]',
         '//img[@class="jsLazyImage"]/@src',
     ],
-    /*
-    
+],
+
+/*
     https://budzma.by/feed/
-    
     [
         'https://www.svaboda.org/api/zyvqp_eqoopy',
         'Радыё Свабода',
@@ -59,8 +58,6 @@ $sources = array(
   case 'BYbeid': $z[0][] = 'Часопіс Ідэя'; $z[1][] = 'https://ideaby.org/feed/'; break;
   case 'BYstmi': $z[0][] = 'МИ РБ'; $z[1][] = 'http://mininform.gov.by/rss.php'; break;
 */
-],
-
 
 
 'by-common-ru' =>
@@ -107,6 +104,12 @@ $sources = array(
         '//div[@class="csc-textpic csc-textpic-center csc-textpic-above"]//p[not(.//strong or .//a)]',
         '//div[@class="inner-center-content"]//img/@src',
     ],
+    [
+        'http://www.belrynok.by/feed/', 
+        'БелРынок', 
+        '//div[@class="content content_text"]/p | //div[@class="content content_text"]/ul/li',
+        '//div[@class="article_images focuspoint"]//img/@src',
+    ],
 ],
     
 /*
@@ -137,8 +140,6 @@ $sources = array(
         '//div[@class="js-text-resize"]/p',
         '',
     ],
-*/
-
 
 
 'by-econom-ru' =>
@@ -148,12 +149,6 @@ $sources = array(
         'Tut.By', 
         '//div[@id="article_body"]/p',
         '',
-    ],
-    [
-        'http://www.belrynok.by/feed/', 
-        'БелРынок', 
-        '//div[@class="content content_text"]/p | //div[@class="content content_text"]/ul/li',
-        '//div[@class="article_images focuspoint"]//img/@src',
     ],
 ],
 
@@ -169,7 +164,6 @@ $sources = array(
 ],
 
 
-
 'by-techno-ru' =>
 [
     [
@@ -178,12 +172,9 @@ $sources = array(
         '//div[@id="article_body"]/p',
         '',
     ],
-/*
+],
   case 'BYstan': $z[0][] = 'НАН РБ'; $z[1][] = 'http://nasb.gov.by/rus/news/rss/'; break;
   case 'BYtepk': $z[0][] = 'ПВТ'; $z[1][] = 'http://www.park.by/rss-mixed/ru'; break;
-*/
-],
-
 
 
 'by-realty-ru' =>
@@ -203,7 +194,6 @@ $sources = array(
 ],
 
 
-
 'by-sports-ru' =>
 [
     [
@@ -215,7 +205,6 @@ $sources = array(
 ],
 
 
-/*
 'by-ru-styles' =>
 [
     [
@@ -244,10 +233,8 @@ $sources = array(
     ],
 # case 'BY  zp': $z[0][] = 'Зялёны партал'; $z[1][] = 'http://greenbelarus.info/news.xml'; break;
 ],
-*/
 
 
-    /*
 'by-ru-region' =>
 [
     [
@@ -271,13 +258,14 @@ $sources = array(
   case 'BYrevv': $z[0][] = 'Віцебская вясна'; $z[1][] = 'http://vitebskspring.org/?format=feed&type=rss'; break;
   case 'BYrewe': $z[0][] = 'Весткі.Info'; $z[1][] = 'http://westki.info/rss.xml'; break;
 ],
-    */
+
+*/
+
 
 
 
 
 # RUSSIA
-
 
 'ru-common-ru' =>
 [
